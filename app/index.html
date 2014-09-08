@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Protected Areas Demo</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/nv.d3.min.css" rel="stylesheet">
+    <link href="css/ol.css" rel="stylesheet">
+    <link href="app.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-xs-6">
+        <div id="map"></div>
+      </div>
+      <div class="col-xs-6">
+        <div class="text-center">
+          <h2>Protected Areas Classification</h2>
+          <p>
+          Draw a polygon on the map.
+          </p>
+        </div>
+        
+        <svg id="chart"></svg>
+        <div class="text-center">
+          <cite><a href="https://github.com/jdeolive/foss4g-geoscript-demo">github.com/jdeolive/foss4g-geoscript-demo</a></cite>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/d3.min.js"></script>
+    <script src="js/nv.d3.min.js"></script>
+    <script src="js/ol-debug.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
