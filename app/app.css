@@ -1,3 +1,9 @@
 #chart {
   height: 512px;
 }
+
+.layers-control {
+    position: fixed;
+    bottom: 10px;
+    top: auto;
+}

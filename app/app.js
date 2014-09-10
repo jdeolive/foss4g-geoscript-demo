@@ -12,8 +12,18 @@ function initMap() {
 
   map = new ol.Map({
     target: 'map',
+    controls: ol.control.defaults().extend([
+      new app.LayersControl({
+        groups: {
+          'default': {
+            title: "Layers"
+          }
+        }
+      })
+    ]),
     layers: [
       new ol.layer.Tile({
+        title: 'Base Map',
         opacity: 0.7,
         extent: projectionExtent,
         source: new ol.source.WMTS({
@@ -27,9 +37,12 @@ function initMap() {
             resolutions: resolutions,
             matrixIds: matrixIds
           }),
-        })
+        }),
+        group: 'background'
       }), 
       new ol.layer.Image({
+        title: 'Protected Areas',
+        visible: false,
         source: new ol.source.ImageWMS({
           url: '/geoserver/oregon/wms',
           params: {'LAYERS': 'padus', 'VERSION': '1.1.1'},
