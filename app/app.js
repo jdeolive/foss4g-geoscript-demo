@@ -51,8 +51,8 @@ function initMap() {
       })
     ],
     view: new ol.View({
-      center: [-13648644.50, 5691775.99],
-      zoom: 9
+      center: [-13656441.076885087, 5700031.1890548],
+      zoom: 11
     })
   });
 
